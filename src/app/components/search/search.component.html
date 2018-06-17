@@ -7,7 +7,7 @@
 </div>
 <div *ngIf="heroes.length > 0" class="card-columns">
 
-  <app-hero-card [hero]="heroObj" [id]="i" *ngFor="let heroObj of heroes; let i = index;"></app-hero-card>
+  <app-hero-card (heroSelect)="verHeroe($event)" [hero]="heroObj" [id]="i" *ngFor="let heroObj of heroes; let i = index;"></app-hero-card>
 
 
 
