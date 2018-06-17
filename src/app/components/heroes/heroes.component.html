@@ -2,6 +2,6 @@
 <hr>
 <div class="card-columns">
 
-<app-hero-card (heroSelect)="verHeroe($event)" [hero]="heroObj" [id]="i" *ngFor="let heroObj of heroes; let i = index;"></app-hero-card>
+<app-hero-card (heroSelect)="verHeroe($event)" [hero]="heroObj" [id]="heroObj.id" *ngFor="let heroObj of heroes;"></app-hero-card>
   
 </div>
