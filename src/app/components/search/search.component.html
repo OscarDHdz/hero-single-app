@@ -2,7 +2,10 @@
   <small>{{query}}</small>
 </h1>
 <hr>
-<div class="card-columns">
+<div *ngIf="heroes.length == 0" class="alert alert-primary" role="alert">
+  No matches...
+</div>
+<div *ngIf="heroes.length > 0" class="card-columns">
 
   <div class="card animated fadeIn fast" *ngFor="let hero of heroes; let i = index;">
     <img class="card-img-top img-fluid" [src]="hero.img" [alt]="hero.nombre">
