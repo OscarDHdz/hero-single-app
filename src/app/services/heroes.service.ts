@@ -56,7 +56,6 @@ export class HeroesService {
   ];
 
   constructor() {
-    console.log('Servicio iniciado');
   }
 
   getHeroes(): Heroe[] {
@@ -65,6 +64,13 @@ export class HeroesService {
 
   getHero(id: number): Heroe {
     return this.heroes[id];
+  }
+
+  searchHero(input: string): Heroe[] {
+    let heros: Heroe[] = [];
+    input = input.toLowerCase();
+    heros = this.heroes.filter(hero => hero.nombre.toLowerCase().indexOf(input) !== -1);
+    return heros;
   }
 
 }
